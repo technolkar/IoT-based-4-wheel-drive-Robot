@@ -4,9 +4,9 @@
 #include <ESP8266WiFi.h>
 #include <BlynkSimpleEsp8266.h>
 
-char auth[] = "lnblxbbMVCTcjYAmbjtawTyt1_-iO0KN"; //This auth code is taking from the blynk cloud when we create the template of the project 
-char ssid[] = "project2G";//The name of hotspot
-char pass[] = "techo123"; //Password of mobile hotspot
+char auth[] = "YOUR_AUTH_TOKEN"; //This auth code is taking from the blynk cloud when we create the template of the project 
+char ssid[] = "YOUR_WIFI_SSID";//The name of hotspot
+char pass[] = "YOUR_WIFI_PASSWORD"; //Password of mobile hotspot
 
 #define BLYNK_PRINT Serial
 
