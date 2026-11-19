@@ -1,3 +1,28 @@
+// =====================================================================
+// IoT 4WD Robot Car (NodeMCU ESP8266 + Blynk)
+// ---------------------------------------------------------------------
+// Board:        NodeMCU ESP8266
+// Motor driver: L298N
+// Control:      Blynk app over Wi-Fi (Serial monitor at 9600 baud)
+//
+// Pin map (NodeMCU -> L298N):
+//   MOTORB_1  D4  -> IN3
+//   MOTORB_2  D5  -> IN4
+//   MOTORB_3  D1  -> IN1
+//   MOTORB_4  D2  -> IN2
+//
+// Blynk virtual pins (buttons):
+//   V1  forward   (MOTORB_1 / MOTORB_2)
+//   V2  backward  (MOTORB_1 / MOTORB_2)
+//   V3  forward   (MOTORB_3 / MOTORB_4)
+//   V4  backward  (MOTORB_3 / MOTORB_4)
+//
+// Before uploading: set YOUR_AUTH_TOKEN, YOUR_WIFI_SSID and
+// YOUR_WIFI_PASSWORD below.
+//
+// Author: Technolokar (Ajay Arjun Mannolkar)
+// =====================================================================
+
 //This code is written by Technolokar and it is used for making the IoT based Four wheel car using the Nodemcu.
 
 #define BLYNK_PRINT Serial
