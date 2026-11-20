@@ -57,6 +57,7 @@ void setup()
 
 // FORWARD 1
 BLYNK_WRITE(V1) {
+  int button = param.asInt(); // read button state from the Blynk app
   if (button == 1) {
     Serial.println("Moving forward");
     digitalWrite(MOTORB_1,HIGH);
@@ -70,6 +71,7 @@ BLYNK_WRITE(V1) {
 }
 // BACKWARD 1
 BLYNK_WRITE(V2) {
+  int button = param.asInt(); // read button state from the Blynk app
   if (button == 1) {
     Serial.println("Moving backward");
     digitalWrite(MOTORB_1,LOW);
@@ -83,6 +85,7 @@ BLYNK_WRITE(V2) {
 }
 // FORWARD 2
 BLYNK_WRITE(V3) {
+  int button = param.asInt(); // read button state from the Blynk app
   if (button == 1) {
     Serial.println("Moving forward");
     digitalWrite(MOTORB_3,LOW);
@@ -96,6 +99,7 @@ BLYNK_WRITE(V3) {
 }
 // BACKWARD 2
 BLYNK_WRITE(V4) {
+  int button = param.asInt(); // read button state from the Blynk app
   if (button == 1) {
     Serial.println("Moving backward");
     digitalWrite(MOTORB_3,HIGH);
@@ -106,4 +110,10 @@ BLYNK_WRITE(V4) {
     digitalWrite(MOTORB_3,LOW);
     digitalWrite(MOTORB_4,LOW);
   }
+}
+
+// MAIN LOOP
+void loop()
+{
+  Blynk.run(); // keep the Blynk connection alive and handle button events
 }
